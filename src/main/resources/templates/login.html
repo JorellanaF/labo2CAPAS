@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Login</title>
+</head>
+<body>
+
+    <h1>Login</h1>
+
+    <!--/*@thymesVar id="usuario" type="com.example.labo2.domain.Usuario"*/-->
+    <form action="#" th:action="@{/login}" th:object="${usuario}" method="post">
+
+        <p>
+            Username: <input type="text" th:field="*{username}">
+        </p>
+        <p>
+            password: <input type="text" th:field="*{password}">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+
+    </form>
+
+</body>
+</html>
